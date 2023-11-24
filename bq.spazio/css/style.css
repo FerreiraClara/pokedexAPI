@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 4%, rgba(106,183,245,1) 61%);
+    text-align: center;
+    /* evitar usar por causa de resolução na responsividade */
+    /* vh == viewheight */
+    min-height: 100vh;
+}
+
+main {
+    display: inline-block;
+    margin-top: 2%;
+    padding: 15px;
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-57%, 0);
+}
+
+button {
+    width: 50%;
+    padding: 4%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    /* 1rem é mesma coisa que 16px (unidade padrão) só que em porcentagem
+    é melhor para trabalhar com responsividade pois fica de acordo com o 
+    tamanho da tela
+    font-size: 1rem;
+    */
+    font-size: clamp(8px, 5vw, 1rem);
+    font-weight: bolder;
+    color: #fff;
+    background-color: #444;
+    /* por padrão é outset */
+    box-shadow: -2px 3px 0 #222, -4px 6px #000;
+}
+
+button:active {
+    /* inset - em cima e lateral */
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
+}
+
+form {
+    position: absolute;
+    width: 65%;
+    top: 65%;
+    left: 13.5%;
+}
+
+.input_search {
+    width: 100%;
+    padding: 4%;
+    outline: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #3a444d;
+    box-shadow: -3px 3px 0 #888, -5px 7px 0 #333;
+}
+
+.pokedex {
+    width: 100%;
+    max-width: 425px;
+}
+
+/* 
+img {
+    só remove fundo branco
+    mix-blend-mode: multiply;
+}
+ */
+
+.pokemon_image{
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-63%,20%);
+    height: 18%;
+}
+
+.pokemon_data{
+    position: absolute;
+    font-weight: 600;
+    color: #aaa;
+    top: 54.5%;
+    right: 27%;
+    font-size: clamp(8px, 5vw, 25px);
+}
+
+.pokemon_name{
+    color: #3a444d;
+    text-transform: capitalize;
+}
